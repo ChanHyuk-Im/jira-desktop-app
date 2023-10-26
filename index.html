@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>jira</title>
+  </head>
+  <body style="padding: 0; margin: 0;">
+    <div>
+      <button id="back"><</button>
+      <button id="forward">></button>
+    </div>
+    <webview
+      id="webview"
+      src="https://payhere.atlassian.net/jira"
+      style="width: 100%; height: 100%;"
+    ></webview>
+  </body>
+  <script>
+    const backButton = document.getElementById('back');
+    const forwardButton = document.getElementById('forward');
+    const webview = document.getElementById('webview');
+
+    webview.addEventListener('did-start-navigation', () => {
+      if (!webview.canGoBack()) {
+        backButton.disabled = true;
+      } else {
+        backButton.disabled = false;
+      }
+
+      if (!webview.canGoForward()) {
+        forwardButton.disabled = true;
+      } else {
+        forwardButton.disabled = false;
+      }
+    });
+
+    backButton.addEventListener('click', () => {
+      if (webview.canGoBack()) {
+        webview.goBack();
+      }
+    });
+    
+    forwardButton.addEventListener('click', () => {
+      if (webview.canGoForward()) {
+        webview.goForward();
+      }
+    });
+  </script>
+</html>
