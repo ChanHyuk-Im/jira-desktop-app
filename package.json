@@ -1,0 +1,30 @@
+{
+  "name": "jira",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^27.0.2"
+  },
+  "build": {
+    "productName": "jira",
+    "appId": "app.jira.payhere.in",
+    "asar": true,
+    "mac": {
+      "target": [
+        "default"
+      ],
+      "icon": "jira.icns"
+    },
+    "dmg": {
+      "title": "jira"
+    }
+  }
+}
