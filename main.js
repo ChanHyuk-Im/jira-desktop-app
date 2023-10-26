@@ -6,6 +6,7 @@ const createWindow = () => {
     width: 800,
     height: 600,
     webPreferences: {
+      webviewTag: true,
       preload: path.join(__dirname, 'preload.js'),
     },
   });
@@ -16,7 +17,7 @@ const createWindow = () => {
     }
   });
 
-  win.loadURL('https://payhere.atlassian.net/jira');
+  win.loadFile('./index.html');
 };
 
 app.whenReady().then(() => {
