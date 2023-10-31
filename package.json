@@ -1,6 +1,6 @@
 {
-  "name": "douzone",
-  "version": "1.0.0",
+  "name": "jira",
+  "version": "1.1.0",
   "description": "",
   "main": "main.js",
   "scripts": {
@@ -15,17 +15,17 @@
     "electron-builder": "^24.6.4"
   },
   "build": {
-    "productName": "더존",
-    "appId": "app.douzone.payhere.in",
+    "productName": "jira",
+    "appId": "app.jira.payhere.in",
     "asar": true,
     "mac": {
       "target": [
         "default"
       ],
-      "icon": "douzone.icns"
+      "icon": "jira.icns"
     },
     "dmg": {
-      "title": "douzone"
+      "title": "jira"
     }
   }
 }
